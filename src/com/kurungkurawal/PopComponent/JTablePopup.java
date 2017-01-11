@@ -126,12 +126,12 @@ public class JTablePopup extends JTable implements PopupComponent {
 	}
 
 	@Override
-	public void showPop() {
+	public void onPopShown() {
 		// popup is shown,
 	}
 
 	@Override
-	public void hidePop() {
+	public void onPopHidden() {
 		// popup is hidden
 	}
 

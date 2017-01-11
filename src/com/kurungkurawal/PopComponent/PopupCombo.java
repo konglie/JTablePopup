@@ -127,14 +127,14 @@ public class PopupCombo extends JTextField implements WindowFocusListener {
 			makeAndShowPopup();
 		}
 		self.isShowingPop = true;
-		popupComponent.showPop();
+		popupComponent.onPopShown();
 	}
 
 	public void hidePopup(){
 		if(pop != null){
 			pop.hide();
 			pop = null;
-			popupComponent.hidePop();
+			popupComponent.onPopHidden();
 		}
 		isShowingPop = false;
 	}
@@ -148,6 +148,7 @@ public class PopupCombo extends JTextField implements WindowFocusListener {
 
 	}
 
+	// ketika frame/window lostfocus, tutup popupnya
 	@Override
 	public void windowLostFocus(WindowEvent e) {
 		hidePopup();

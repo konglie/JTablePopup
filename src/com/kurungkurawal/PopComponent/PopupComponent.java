@@ -9,8 +9,8 @@ import javax.swing.*;
 public interface PopupComponent {
 	JComponent getComponent();
 	void filter(String search);
-	void showPop();
-	void hidePop();
+	void onPopShown();
+	void onPopHidden();
 	void setPopupCombo(PopupCombo popupCombo);
 	Object getSelected();
 }
